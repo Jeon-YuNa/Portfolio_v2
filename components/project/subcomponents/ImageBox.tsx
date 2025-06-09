@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ProjectImages } from "../data/image";
 import { ProjectData } from "@/types/projects";
+import nonymosaaImage from "../../../img/nonymosaa.png";
 
 const ImageBox = ({
   siteURL,
@@ -14,7 +15,7 @@ const ImageBox = ({
     >
       <a href={siteURL} target="_blank">
         <Image
-          src={ProjectImages[`${title}`]}
+          src={ProjectImages[`${title}`] || nonymosaaImage}
           alt=""
           className="img"
           priority
